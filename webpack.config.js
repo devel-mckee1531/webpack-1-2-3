@@ -20,6 +20,20 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              importLoaders: 2,
+            },
+          },
+          'sass-loader',
+        ],
+      },
     ],
   },
 }
